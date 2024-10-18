@@ -8,7 +8,7 @@ import{Ecommerce, Orders,Calendar, Area,Line, Stacked, Pie, ColorPicker,Kanban, 
 import "./App.css";
 
 function App() {
-  const activeMenu = false;
+  const activeMenu = true;
 
   return (
     <div>
@@ -33,7 +33,7 @@ function App() {
             <div className="w-0 dark:bg-secondary-dark-bg  "><Sidebar/></div>
           )}
           <div
-            className={`dark:bg-secondary-dark-bg bg-main-bg min-h-screen dark:bg-secondary-dark-bg  bg-main-bg min-h-screen  w-full ${
+            className={`dark:bg-secondary-dark-bg bg-main-bg min-h-screen dark:bg-secondary-dark-bg bg-main-bg min-h-screen  w-full ${
               activeMenu ? "md-ml-72" : "flex-2"
             }`}
           >
@@ -49,7 +49,7 @@ function App() {
               <Route path="/orders" element= {<Orders/>}/>
               <Route path="/employees" element={<Employees/>}/>
               <Route path="/customers" element ={<Employees/>}/>
-              <Route path="/ecommerce" element={<Ecommerce/>}/>
+              {/* <Route path="/ecommerce" element={<Ecommerce/>}/> */}
 
               {/* apps */}
               <Route path="/kanban" element={<Kanban/>} />
