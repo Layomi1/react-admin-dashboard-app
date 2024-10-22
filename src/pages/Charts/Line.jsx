@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Linet = () => {
+const Line = () => {
   return (
-    <div>Linet</div>
+    <div>Line</div>
   )
 }
 
-export default Linet
+export default Line
