@@ -625,7 +625,7 @@ export const earningData = [
   },
   {
     icon: <BsBoxSeam />,
-    amount: '4,396',
+    amount: '4,396', 
     percentage: '+23%',
     title: 'Products',
     iconColor: 'rgb(255, 244, 229)',

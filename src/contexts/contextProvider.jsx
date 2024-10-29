@@ -18,11 +18,11 @@ export const ContextProvider = ({ children }) => {
     const handleResize = () => {
       setScreenSize(window.innerWidth);
 
-      window.addEventListener('resize', handleResize);
+      window.addEventListener("resize", handleResize);
 
       handleResize();
 
-      return () => window.removeEventListener('resize', handleResize);
+      return () => window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -30,6 +30,9 @@ export const ContextProvider = ({ children }) => {
   const handleClick = (clicked) =>{
     setIsClicked({...IntialState, [clicked]:true})
   }
+  
+ 
+
   
  
   return (

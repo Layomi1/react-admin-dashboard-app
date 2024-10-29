@@ -24,8 +24,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => {
           style={{ background: dotColor }}
           className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
         />
-          {icon}
-      
+        {icon}
       </button>
     </TooltipComponent>
   );
@@ -42,8 +41,8 @@ const Navbar = () => {
     setScreenSize,
   } = useStateContext();
 
- 
-
+  
+  
   useEffect(() => {
     if(screenSize <= 900) {
       setActiveMenu(false);
@@ -51,7 +50,6 @@ const Navbar = () => {
       setActiveMenu(true);
     }
   }, [screenSize]);
-
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
@@ -104,7 +102,6 @@ const Navbar = () => {
             />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>
-              {""}
               <span className=" text-gray-400 ml-1 text-14 font-bold ">
                 Michael
               </span>
