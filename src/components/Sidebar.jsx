@@ -20,9 +20,9 @@ const handleCloseSideBar = () => {
   
 }
 
-  const activeLink ='flex items-center gap-4 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2 ';
+  const activeLink ='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2 ';
 
-  const normalLink ='flex items-center gap-4 pl-4 pt-3 pb-2.5 rounded-lg text-gray-700 text-md  dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 ';
+  const normalLink ='flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-gray-700 text-md  dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2 ';
 
   return (
     <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pt-10">
@@ -49,7 +49,7 @@ const handleCloseSideBar = () => {
           <div className="mt-10">
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 m-3 mt-4 uppercase">{item.title}</p>
+                <p className="text-gray-400 m-3 mt-4 uppercase dark:text-gray-400">{item.title}</p>
                 {
                   item.links.map((link)=>(
                     <NavLink to={`/${link.name}`} key={link.name} onClick={handleCloseSideBar} className={({isActive})=>
