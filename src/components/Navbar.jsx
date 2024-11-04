@@ -33,12 +33,13 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => {
 const Navbar = () => {
   const {
     activeMenu,
+    currentColor,
     setActiveMenu,
     isClicked,
     setIsClicked,
     handleClick,
     screenSize,
-    setScreenSize,
+    setScreenSize, 
   } = useStateContext();
 
   
@@ -52,11 +53,11 @@ const Navbar = () => {
   }, [screenSize]);
 
   return (
-    <div className="flex justify-between p-2 md:mx-6 relative">
+    <div className="flex justify-between p-2 md:mx-6 relative  ">
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color="blue"
+        color={currentColor}
         icon={<AiOutlineMenu />}
       />
 
@@ -64,7 +65,7 @@ const Navbar = () => {
         <NavButton
           title="Cart"
           customFunc={() => handleClick("cart")}
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
 
@@ -72,7 +73,7 @@ const Navbar = () => {
           title="Chat"
           customFunc={() => handleClick("chat")}
           dotColor="#03C907"
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
         />
 
@@ -81,7 +82,7 @@ const Navbar = () => {
           title="Notification"
           customFunc={() => handleClick("notification")}
           dotColor="#03C907"
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
         />
 
