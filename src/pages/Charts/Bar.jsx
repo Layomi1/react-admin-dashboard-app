@@ -21,7 +21,7 @@ const Bar = () => {
   return (
     <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Charts" title="Bar" />
-      <div className='full'>
+      <div className='full mx-auto '>
       <ChartComponent
       id="charts"
       primaryXAxis={barPrimaryXAxis}
