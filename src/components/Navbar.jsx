@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { SiShopware } from "react-icons/si";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
@@ -39,27 +41,34 @@ const Navbar = () => {
     setIsClicked,
     handleClick,
     screenSize,
-    setScreenSize, 
+    setScreenSize,
   } = useStateContext();
 
-  
-  
-  useEffect(() => {
-    if(screenSize <= 900) {
-      setActiveMenu(false);
-    } else {
-      setActiveMenu(true);
-    }
-  }, [screenSize]);
+  // useEffect(() => {
+  //   if (screenSize <= 900) {
+  //     setActiveMenu(false);
+  //   } else {
+  //     setActiveMenu(true);
+  //   }
+  // }, [screenSize]);
 
   return (
-    <div className="flex justify-between p-2 md:mx-6 relative  ">
-      <NavButton
-        title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color={currentColor}
-        icon={<AiOutlineMenu />}
-      />
+    <div className="flex justify-between p-2 md:mx-6 relative items-center ">
+      <div className="flex items-center">
+        <NavButton
+          title="Menu"
+          customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+          color={currentColor}
+          icon={<AiOutlineMenu />}
+        />
+        <Link
+          to="/"
+          // onClick={() => setActiveMenu(true)}
+          className="items-center gap-3 ml-3  flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900 "
+        >
+          <SiShopware /> <span>Shoppy</span>
+        </Link>
+      </div>
 
       <div className="flex">
         <NavButton
