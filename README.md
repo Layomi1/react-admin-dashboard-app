@@ -1,6 +1,6 @@
 # Deployed on :
 https://rookie-admin-dashboard.netlify.app/.
-Ths React project was implemented Syncfusion and styled using Tailwind CSS.
+Ths React project was implemented using Syncfusion and Tailwind CSS 
 
 # Getting Started with Create React App
 
